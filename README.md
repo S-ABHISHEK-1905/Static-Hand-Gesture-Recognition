@@ -53,3 +53,8 @@ Index and middle finger extended, others folded.
 Only the thumb extended, all other fingers folded.
 
 Additional condition: thumb pointing upward relative to palm.
+
+
+
+## OUTPUT
+[![Watch the demo](./OUTPUT.mp4)
