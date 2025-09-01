@@ -149,6 +149,10 @@ The webcam window will open and display the detected gesture in real-time.
 
 9. Release webcam and close all windows.
 
+<hr>
+
+<br>
+
 ## OUTPUT
 https://github.com/user-attachments/assets/8393e84d-f837-4f69-a351-ad70963bd035
 
