@@ -41,7 +41,7 @@ fingersUp(hand) — helper that returns [Thumb, Index, Middle, Ring, Pinky] with
 
 Using those outputs we classify the required four static gestures with deterministic rules:
 
-#### Open Palm
+### Open Palm
 
 Condition: fingers == [1, 1, 1, 1, 1].
 
@@ -49,7 +49,7 @@ Meaning: all five fingers detected as “up”.
 
 Visual feedback: label "Open Palm" displayed on screen.
 
-#### Fist
+### Fist
 
 Condition: fingers == [0, 0, 0, 0, 0].
 
@@ -57,7 +57,7 @@ Meaning: fingertips are near or behind knuckles — all fingers down.
 
 Visual feedback: label "Fist" displayed.
 
-#### Peace Sign (V-sign)
+### Peace Sign (V-sign)
 
 Condition: fingers[1:3] == [1, 1] and fingers[3:] == [0, 0]. Thumb is allowed to be either 0 or 1 for tolerance.
 
@@ -65,7 +65,7 @@ Meaning: Index and middle fingers extended, ring and pinky folded.
 
 Visual feedback: label "Peace Sign".
 
-#### Thumbs Up
+### Thumbs Up
 
 Condition: fingers == [1, 0, 0, 0, 0] and orientation sanity check:
 
