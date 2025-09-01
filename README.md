@@ -1,5 +1,6 @@
 # Static-Hand-Gesture-Recognition
 
+<br>
 
 ## Overview of Project
 
@@ -16,7 +17,7 @@ It can detect and classify four distinct static gestures:
 
 The system uses a webcam feed, performs hand landmark detection, and applies gesture classification logic to recognize the gestures. The recognized gesture is displayed live on the video stream.
 
-
+<br>
 
 ## Technology Justification
 
@@ -34,7 +35,7 @@ Why this choice?
 cvzone + MediaPipe provides a ready-to-use with a rich feature set, optimized solution for hand tracking and gesture recognition, making it the best choice for this problem.
 ```
 
-
+<br>
 
 
 ## Gesture Logic Explanation
@@ -84,7 +85,7 @@ Meaning: only thumb raised and pointing upward.
 Visual feedback: label "Thumbs Up".
 
 
-
+<br>
 
 
 ## OUTPUT
