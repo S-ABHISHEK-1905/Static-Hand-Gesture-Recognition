@@ -42,6 +42,7 @@ cvzone + MediaPipe provides a ready-to-use with a rich feature set, optimized so
 We use cvzone.HandDetector to get:
 
 lmList — list of 21 landmark points (each point: (x, y, z) in pixel coords),
+
 <img width="850" height="412" alt="image" src="https://github.com/user-attachments/assets/826c2391-7dc2-4ac8-85c6-4e8803a25949" />
 
 bbox — hand bounding box,
@@ -50,7 +51,9 @@ fingersUp(hand) — helper that returns [Thumb, Index, Middle, Ring, Pinky] with
 
 Using those outputs we classify the required four static gestures with deterministic rules:
 
-### Open Palm
+<hr>
+
+### 🖐 Open Palm
 
 Condition: fingers == [1, 1, 1, 1, 1].
 
