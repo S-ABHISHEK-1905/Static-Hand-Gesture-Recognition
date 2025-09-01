@@ -14,6 +14,8 @@ It can detect and classify four distinct static gestures:
 
 The system uses a webcam feed, performs hand landmark detection, and applies gesture classification logic to recognize the gestures. The recognized gesture is displayed live on the video stream.
 
+
+
 ## Technology Justification
 
 #### cvzone (HandTrackingModule)
@@ -24,10 +26,14 @@ Easy-to-use wrapper, making code simpler and cleaner.
 #### OpenCV
 Efficient real-time video stream processing.
 Drawing utilities for bounding boxes, skeletons, and text overlay.
+
 ```
 Why this choice?
 cvzone + MediaPipe provides a ready-to-use with a rich feature set, optimized solution for hand tracking and gesture recognition, making it the best choice for this problem.
 ```
+
+
+
 
 ## Gesture Logic Explanation
 We use cvzone.HandDetector to get:
@@ -74,6 +80,8 @@ Check that the thumb tip Y coordinate is above the wrist Y coordinate by a small
 Meaning: only thumb raised and pointing upward.
 
 Visual feedback: label "Thumbs Up".
+
+
 
 
 
