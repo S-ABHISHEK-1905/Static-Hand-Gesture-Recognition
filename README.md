@@ -18,6 +18,7 @@ It can detect and classify four distinct static gestures:
 The system uses a webcam feed, performs hand landmark detection, and applies gesture classification logic to recognize the gestures. The recognized gesture is displayed live on the video stream.
 
 <hr>
+
 <br>
 
 ## Technology Justification
@@ -37,6 +38,7 @@ cvzone + MediaPipe provides a ready-to-use with a rich feature set, optimized so
 ```
 
 <hr>
+
 <br>
 
 
@@ -77,9 +79,9 @@ Visual feedback: label "Fist" displayed.
 
 ### ✌ Peace Sign (V-sign)
 
-Condition: fingers[1:3] == [1, 1] and fingers[3:] == [0, 0]. Thumb is allowed to be either 0 or 1 for tolerance.
+Condition: fingers == [0, 1, 1, 0, 0].
 
-Meaning: Index and middle fingers extended, ring and pinky folded.
+Meaning: Index and middle fingers extended, others folded.
 
 Visual feedback: label "Peace Sign".
 
@@ -87,11 +89,9 @@ Visual feedback: label "Peace Sign".
 
 ### 👍 Thumbs Up
 
-Condition: fingers == [1, 0, 0, 0, 0] and orientation sanity check:
+Condition: fingers == [1, 0, 0, 0, 0].
 
-Check that the thumb tip Y coordinate is above the wrist Y coordinate by a small margin (i.e., tip is higher on the screen) — ensures thumb is pointing up, not sideways.
-
-Meaning: only thumb raised and pointing upward.
+Meaning: only thumb raised.
 
 Visual feedback: label "Thumbs Up".
 
