@@ -88,24 +88,32 @@ Visual feedback: label "Thumbs Up".
 <br>
 
 ## Setup and Execution Instructions
+
 ### 1. Clone Repository
 ```
 git clone https://github.com/your-username/hand-gesture-recognition.git
 cd hand-gesture-recognition
 ```
+
 ### 2. Create Virtual Environment (Recommended)
 ```
 python -m venv venv
-venv\Scripts\activate      # Windows
+venv\Scripts\activate      
 ```
-3️⃣ Install Dependencies
+
+### 3. Install Dependencies
+```
 pip install -r requirements.txt
+```
 
-4️⃣ Run the Application
+### 4. Run the Application
+```
 python hand_gesture_recognition.py
+```
 
+The webcam window will open and display the detected gesture in real-time.
 
-👉 The webcam window will open and display the detected gesture in real-time.
+<br>
 
 ## OUTPUT
 https://github.com/user-attachments/assets/8393e84d-f837-4f69-a351-ad70963bd035
