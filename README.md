@@ -26,37 +26,59 @@ Efficient real-time video stream processing.
 Drawing utilities for bounding boxes, skeletons, and text overlay.
 ```
 Why this choice?
-Other deep learning-based approaches (like YOLO/SSD) would require custom dataset training, which is complex and heavy for simple static gestures. cvzone + MediaPipe provides a ready-to-use, optimized solution for hand tracking and gesture recognition, making it the best choice for this problem.
+cvzone + MediaPipe provides a ready-to-use with a rich feature set, optimized solution for hand tracking and gesture recognition, making it the best choice for this problem.
 ```
 
 ## Gesture Logic Explanation
+We use cvzone.HandDetector to get:
 
-We detect 21 hand landmarks and classify gestures based on finger states (open/closed).
+lmList — list of 21 landmark points (each point: (x, y, z) in pixel coords),
+<img width="850" height="412" alt="image" src="https://github.com/user-attachments/assets/826c2391-7dc2-4ac8-85c6-4e8803a25949" />
 
-#### Open Palm 🖐
+bbox — hand bounding box,
 
-All five fingers extended.
-Checked by comparing fingertip positions with lower joints.
+fingersUp(hand) — helper that returns [Thumb, Index, Middle, Ring, Pinky] with 1 = finger up, 0 = finger down.
 
-#### Fist ✊
+Using those outputs we classify the required four static gestures with deterministic rules:
 
-All fingers folded.
+#### Open Palm
 
-Fingertip positions are below the knuckles.
+Condition: fingers == [1, 1, 1, 1, 1].
 
-#### Peace Sign ✌
+Meaning: all five fingers detected as “up”.
 
-Index and middle finger extended, others folded.
+Visual feedback: label "Open Palm" displayed on screen.
 
-#### Thumbs Up 👍
+#### Fist
 
-Only the thumb extended, all other fingers folded.
+Condition: fingers == [0, 0, 0, 0, 0].
 
-Additional condition: thumb pointing upward relative to palm.
+Meaning: fingertips are near or behind knuckles — all fingers down.
+
+Visual feedback: label "Fist" displayed.
+
+#### Peace Sign (V-sign)
+
+Condition: fingers[1:3] == [1, 1] and fingers[3:] == [0, 0]. Thumb is allowed to be either 0 or 1 for tolerance.
+
+Meaning: Index and middle fingers extended, ring and pinky folded.
+
+Visual feedback: label "Peace Sign".
+
+#### Thumbs Up
+
+Condition: fingers == [1, 0, 0, 0, 0] and orientation sanity check:
+
+Check that the thumb tip Y coordinate is above the wrist Y coordinate by a small margin (i.e., tip is higher on the screen) — ensures thumb is pointing up, not sideways.
+
+Meaning: only thumb raised and pointing upward.
+
+Visual feedback: label "Thumbs Up".
 
 
 
 ## OUTPUT
-## 🎥 Demo Video
-[![Watch the video]()](https://youtu.be/Ri3BUHzVqzE)
+https://github.com/user-attachments/assets/8393e84d-f837-4f69-a351-ad70963bd035
+
+
 
