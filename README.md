@@ -104,8 +104,8 @@ Visual feedback: label "Thumbs Up".
 
 ### 1. Clone Repository
 ```
-git clone https://github.com/your-username/hand-gesture-recognition.git
-cd hand-gesture-recognition
+git clone https://github.com/S-ABHISHEK-1905/Static-Hand-Gesture-Recognition
+cd Static-Hand-Gesture-Recognition
 ```
 
 ### 2. Create Virtual Environment (Recommended)
@@ -121,13 +121,33 @@ pip install -r requirements.txt
 
 ### 4. Run the Application
 ```
-python hand_gesture_recognition.py
+python main.py
 ```
 
 The webcam window will open and display the detected gesture in real-time.
 
 <hr>
 <br>
+
+## Algorithm
+
+1. Initialize webcam and required libraries (cv2, cvzone, numpy).
+
+2. Create HandDetector object with maxHands=1 and detectionCon=0.8.
+
+3. Capture video frames in a loop.
+
+4. Detect hand(s) using detector.findHands().
+
+5. Extract finger states with detector.fingersUp().
+
+6. Compare finger states to predefined patterns for gestures.
+
+7. Display detected gesture name and hand skeleton on the frame.
+
+8. Continue looping until user presses 'q'.
+
+9. Release webcam and close all windows.
 
 ## OUTPUT
 https://github.com/user-attachments/assets/8393e84d-f837-4f69-a351-ad70963bd035
