@@ -1,4 +1,4 @@
-# Static-Hand-Gesture-Recognition
+# Static Hand Gesture Recognition by S.ABHISHEK
 
 <br>
 
