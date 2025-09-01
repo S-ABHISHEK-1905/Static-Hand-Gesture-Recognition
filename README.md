@@ -57,5 +57,6 @@ Additional condition: thumb pointing upward relative to palm.
 
 
 ## OUTPUT
-![](https://youtu.be/Ri3BUHzVqzE)
+## 🎥 Demo Video
+[![Watch the video]()](https://youtu.be/Ri3BUHzVqzE)
 
