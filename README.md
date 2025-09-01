@@ -17,6 +17,7 @@ It can detect and classify four distinct static gestures:
 
 The system uses a webcam feed, performs hand landmark detection, and applies gesture classification logic to recognize the gestures. The recognized gesture is displayed live on the video stream.
 
+<hr>
 <br>
 
 ## Technology Justification
@@ -35,6 +36,7 @@ Why this choice?
 cvzone + MediaPipe provides a ready-to-use with a rich feature set, optimized solution for hand tracking and gesture recognition, making it the best choice for this problem.
 ```
 
+<hr>
 <br>
 
 
@@ -61,7 +63,9 @@ Meaning: all five fingers detected as “up”.
 
 Visual feedback: label "Open Palm" displayed on screen.
 
-### Fist
+<hr>
+
+### ✊ Fist
 
 Condition: fingers == [0, 0, 0, 0, 0].
 
@@ -69,7 +73,9 @@ Meaning: fingertips are near or behind knuckles — all fingers down.
 
 Visual feedback: label "Fist" displayed.
 
-### Peace Sign (V-sign)
+<hr>
+
+### ✌ Peace Sign (V-sign)
 
 Condition: fingers[1:3] == [1, 1] and fingers[3:] == [0, 0]. Thumb is allowed to be either 0 or 1 for tolerance.
 
@@ -77,7 +83,9 @@ Meaning: Index and middle fingers extended, ring and pinky folded.
 
 Visual feedback: label "Peace Sign".
 
-### Thumbs Up
+<hr>
+
+### 👍 Thumbs Up
 
 Condition: fingers == [1, 0, 0, 0, 0] and orientation sanity check:
 
@@ -87,6 +95,8 @@ Meaning: only thumb raised and pointing upward.
 
 Visual feedback: label "Thumbs Up".
 
+
+<hr>
 
 <br>
 
@@ -116,6 +126,7 @@ python hand_gesture_recognition.py
 
 The webcam window will open and display the detected gesture in real-time.
 
+<hr>
 <br>
 
 ## OUTPUT
