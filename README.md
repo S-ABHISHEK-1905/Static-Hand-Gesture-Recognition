@@ -57,5 +57,21 @@ Additional condition: thumb pointing upward relative to palm.
 
 
 ## OUTPUT
-![Watch the demo](https://youtu.be/Ri3BUHzVqzE)
+# Hand Gesture Recognition 🎯
+
+This project detects and recognizes four static hand gestures in real-time:
+- ✋ Open Palm  
+- ✊ Fist  
+- ✌️ Peace Sign (V-sign)  
+- 👍 Thumbs Up  
+
+---
+
+## 🎥 Demo
+
+### Option 1: Direct GitHub-Hosted Video (MP4 preview)
+https://github.com/your-username/your-repo-name/raw/main/demo.mp4  
+
+### Option 2: Clickable Thumbnail (Recommended)
+[![Watch the demo](./out.png)](https://youtu.be/Ri3BUHzVqzE)
 
