@@ -1,4 +1,6 @@
 # Static-Hand-Gesture-Recognition
+
+<br>
 ## Overview of Project
 
 This project demonstrates real-time hand gesture recognition using cvzone (built on top of MediaPipe) and OpenCV.
