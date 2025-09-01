@@ -5,20 +5,23 @@ This project demonstrates real-time hand gesture recognition using cvzone (built
 It can detect and classify four distinct static gestures:
 
 🖐 Open Palm
+
 ✊ Fist
+
 ✌ Peace Sign (V-sign)
+
 👍 Thumbs Up
 
 The system uses a webcam feed, performs hand landmark detection, and applies gesture classification logic to recognize the gestures. The recognized gesture is displayed live on the video stream.
 
 ## Technology Justification
 
-### cvzone (HandTrackingModule)
+#### cvzone (HandTrackingModule)
 Built on Google’s MediaPipe, providing 21 landmark points per hand.
 High accuracy and lightweight for real-time detection.
 Easy-to-use wrapper, making code simpler and cleaner.
 
-### OpenCV
+#### OpenCV
 Efficient real-time video stream processing.
 Drawing utilities for bounding boxes, skeletons, and text overlay.
 ```
@@ -30,23 +33,22 @@ Other deep learning-based approaches (like YOLO/SSD) would require custom datase
 
 We detect 21 hand landmarks and classify gestures based on finger states (open/closed).
 
-Open Palm 🖐
+#### Open Palm 🖐
 
 All five fingers extended.
-
 Checked by comparing fingertip positions with lower joints.
 
-Fist ✊
+#### Fist ✊
 
 All fingers folded.
 
 Fingertip positions are below the knuckles.
 
-Peace Sign ✌
+#### Peace Sign ✌
 
 Index and middle finger extended, others folded.
 
-Thumbs Up 👍
+#### Thumbs Up 👍
 
 Only the thumb extended, all other fingers folded.
 
