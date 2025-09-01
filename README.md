@@ -57,4 +57,5 @@ Additional condition: thumb pointing upward relative to palm.
 
 
 ## OUTPUT
-[![Watch the demo](./OUTPUT.mp4)
+[![Watch the demo](https://github.com/S-ABHISHEK-1905/Static-Hand-Gesture-Recognition/blob/main/out.png)](https://github.com/S-ABHISHEK-1905/Static-Hand-Gesture-Recognition/blob/main/OUTPUT.mp4)
+
